@@ -1,1 +1,264 @@
 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小小怪卡密系统 - 简单高效的卡密验证解决方案</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: #3a71d1;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #fff;
+            color: #3a71d1;
+            padding: 12px 25px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-2px);
+        }
+        section {
+            padding: 60px 0;
+        }
+        .features {
+            background-color: white;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2rem;
+            color: #333;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .feature-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .feature-card h3 {
+            margin: 20px 0;
+            color: #3a71d1;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #3a71d1;
+        }
+        .usage {
+            background-color: #f1f5fd;
+        }
+        .usage-steps {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .step {
+            margin-bottom: 40px;
+            padding-left: 20px;
+            border-left: 3px solid #3a71d1;
+        }
+        .step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #3a71d1;
+        }
+        .step p {
+            color: #666;
+        }
+        pre {
+            background-color: #282c34;
+            color: #abb2bf;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: monospace;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        footer a {
+            color: #3a71d1;
+        }
+        .demo-image {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 0;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>小小怪卡密系统</h1>
+            <p>一款简单高效的PHP卡密验证系统，支持时间卡密和次数卡密，助力开发者轻松实现软件授权管理</p>
+            <a href="https://github.com/xxg11/xxg-kami-push" class="btn">GitHub 开源项目</a>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">核心特性</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔑</div>
+                    <h3>多种卡密类型</h3>
+                    <p>支持时间卡密和次数卡密，满足不同授权需求，灵活配置有效期和使用次数</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>简单高效</h3>
+                    <p>轻量级设计，API接口响应迅速，低系统资源占用，适合各种规模的应用</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>安全可靠</h3>
+                    <p>采用安全的验证机制，防止卡密被盗用，可设置设备绑定增强安全性</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>完善的管理后台</h3>
+                    <p>直观的卡密管理界面，支持批量生成、查询、修改和删除操作</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔌</div>
+                    <h3>简单集成</h3>
+                    <p>提供简洁的API接口，易于集成到各种应用中，支持多种编程语言调用</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>响应式设计</h3>
+                    <p>后台管理界面采用响应式设计，支持在各种设备上操作管理</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="usage">
+        <div class="container">
+            <h2 class="section-title">使用方法</h2>
+            <div class="usage-steps">
+                <div class="step">
+                    <h3>步骤1: 下载并部署</h3>
+                    <p>从GitHub克隆项目并部署到支持PHP和MySQL的服务器环境</p>
+                    <pre>git clone https://github.com/xxg11/xxg-kami-push.git</pre>
+                </div>
+                <div class="step">
+                    <h3>步骤2: 配置数据库</h3>
+                    <p>导入install.sql创建数据库结构，修改config.php配置数据库连接信息</p>
+                </div>
+                <div class="step">
+                    <h3>步骤3: 生成卡密</h3>
+                    <p>登录管理后台，批量生成卡密，可选择时间卡密或次数卡密</p>
+                </div>
+                <div class="step">
+                    <h3>步骤4: API调用示例</h3>
+                    <p>在您的应用中集成卡密验证API</p>
+                    <pre>// PHP示例代码
+$url = "https://您的域名/api/verify.php";
+$data = [
+    'card' => '用户输入的卡密',
+    'device_id' => '设备唯一标识'
+];
+
+$options = [
+    'http' => [
+        'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+        'method' => 'POST',
+        'content' => http_build_query($data)
+    ]
+];
+
+$context = stream_context_create($options);
+$result = file_get_contents($url, false, $context);
+$response = json_decode($result, true);
+
+if ($response['code'] == 0) {
+    // 卡密验证成功
+    echo "验证成功，到期时间: " . $response['data']['expire_time'];
+} else {
+    // 验证失败
+    echo "验证失败: " . $response['msg'];
+}</pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">系统截图</h2>
+            <div style="text-align: center;">
+                <p>管理后台界面预览</p>
+                <img src="https://via.placeholder.com/800x450?text=小小怪卡密系统后台预览" alt="管理后台预览" class="demo-image">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 小小怪卡密系统 - 开源项目</p>
+            <p>GitHub: <a href="https://github.com/xxg11/xxg-kami-push" target="_blank">https://github.com/xxg11/xxg-kami-push</a></p>
+        </div>
+    </footer>
+</body>
+</html>
