@@ -198,6 +198,49 @@
                 font-size: 1.8rem;
             }
         }
+        .screenshots {
+            background-color: white;
+            padding: 50px 0;
+        }
+        .screenshot-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        .screenshot-item {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .screenshot-item h3 {
+            color: #3a71d1;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .screenshot-item p {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .screenshot-img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .screenshot-img:hover {
+            transform: scale(1.02);
+        }
+        @media (min-width: 768px) {
+            .screenshot-container {
+                flex-direction: row;
+            }
+            .screenshot-item {
+                flex: 1;
+            }
+        }
     </style>
 </head>
 <body>
@@ -258,6 +301,24 @@
         </div>
     </section>
 
+    <section class="screenshots">
+        <div class="container">
+            <h2 class="section-title">系统界面预览</h2>
+            <div class="screenshot-container">
+                <div class="screenshot-item">
+                    <h3>前端卡密验证界面</h3>
+                    <p>简洁直观的验证页面，用户体验友好</p>
+                    <img src="https://www.xxg-yyds.com/img/qian.png" alt="小小怪卡密系统前端界面" class="screenshot-img">
+                </div>
+                <div class="screenshot-item">
+                    <h3>后台管理界面</h3>
+                    <p>功能完善的管理后台，轻松管理卡密</p>
+                    <img src="https://www.xxg-yyds.com/img/hou.png" alt="小小怪卡密系统后台界面" class="screenshot-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="usage">
         <div class="container">
             <h2 class="section-title">使用方法</h2>
@@ -305,16 +366,6 @@ if ($response['code'] == 0) {
     echo "验证失败: " . $response['msg'];
 }</pre>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="container">
-            <h2 class="section-title">系统截图</h2>
-            <div style="text-align: center;">
-                <p>管理后台界面预览</p>
-                <img src="https://via.placeholder.com/800x450?text=小小怪卡密系统后台预览" alt="管理后台预览" class="demo-image">
             </div>
         </div>
     </section>
