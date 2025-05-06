@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -21,6 +20,61 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+        nav {
+            background-color: #2a5cad;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        .nav-links li {
+            margin-left: 30px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .nav-links a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        .nav-links a.active {
+            background-color: rgba(255,255,255,0.2);
+        }
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                padding: 15px;
+            }
+            .logo {
+                margin-bottom: 15px;
+            }
+            .nav-links li {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
         }
         header {
             background-color: #3a71d1;
@@ -147,11 +201,22 @@
     </style>
 </head>
 <body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">小小怪卡密系统</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="https://github.com/xiaoxiaoguai-yyds/xxgkami" target="_blank">开源地址</a></li>
+                <li><a href="docx.html">文档</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header>
         <div class="container">
             <h1>小小怪卡密系统</h1>
             <p>一款简单高效的PHP卡密验证系统，支持时间卡密和次数卡密，助力开发者轻松实现软件授权管理</p>
-            <a href="https://github.com/xxg11/xxg-kami-push" class="btn">GitHub 开源项目</a>
+            <a href="https://github.com/xiaoxiaoguai-yyds/xxgkami" class="btn">GitHub 开源项目</a>
         </div>
     </header>
 
@@ -200,7 +265,7 @@
                 <div class="step">
                     <h3>步骤1: 下载并部署</h3>
                     <p>从GitHub克隆项目并部署到支持PHP和MySQL的服务器环境</p>
-                    <pre>git clone https://github.com/xxg11/xxg-kami-push.git</pre>
+                    <pre>git clone https://github.com/xiaoxiaoguai-yyds/xxgkami.git</pre>
                 </div>
                 <div class="step">
                     <h3>步骤2: 配置数据库</h3>
@@ -257,7 +322,7 @@ if ($response['code'] == 0) {
     <footer>
         <div class="container">
             <p>© 2024 小小怪卡密系统 - 开源项目</p>
-            <p>GitHub: <a href="https://github.com/xxg11/xxg-kami-push" target="_blank">https://github.com/xxg11/xxg-kami-push</a></p>
+            <p>GitHub: <a href="https://github.com/xiaoxiaoguai-yyds/xxgkami" target="_blank">https://github.com/xiaoxiaoguai-yyds/xxgkami</a></p>
         </div>
     </footer>
 </body>
