@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xiaoxiaoguai-yyds.github.io/xxgkami/sitemap.xml 
