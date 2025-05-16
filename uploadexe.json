@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "releaseDate": "2023-12-01",
   "updateAvailable": true,
-  "latestVersion": "1.0.0",
+  "latestVersion": "1.1.0",
   "latestReleaseDate": "2024-03-15",
   "changes": [
     "添加次数卡密功能",
